@@ -1,15 +1,98 @@
-.detailsButton {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 15px;
-    background-color: #007bff;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 14px;
-    text-align: center;
-  }
-  
-  .detailsButton:hover {
-    background-color: #0056b3;
-  }
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #523636;
+  margin: 0;
+  padding: 0;
+}
+
+input[type="text"] {
+  padding: 10px;
+  font-size: 16px;
+  width: 300px;
+  margin: 20px;
+  border-radius: 5px;
+  border: 1px solid #efefef;
+}
+
+
+
+div > div > div {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  padding: 20px;
+}
+
+div > div > div > div {
+  background-color: #f7baba;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+div > div > div > div:hover {
+  transform: translateY(-10px);
+}
+
+h3 {
+  font-size: 18px;
+  color: #333;
+}
+
+p {
+  font-size: 14px;
+  color: #555;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.bouton {
+  padding: 12px 24px;                  
+  font-size: 16px;                       
+  border-radius: 25px;                  
+  border: 2px solid #070000;            
+  background-color: #f7baba;             
+  color: #070000;                       
+  font-weight: bold;                    
+  text-transform: uppercase;             
+  cursor: pointer;                  
+  transition: all 0.3s ease;            
+  margin: 10px;                         
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+.button-container {
+  display: flex;            
+  justify-content: space-between; 
+  align-items: center;        
+  width: 99%;               
+  gap: 10px;                 
+}
+.bouton:hover {
+  background-color: #070000;           
+  color: #f7baba;                     
+  border-color: #f7baba;              
+  transform: translateY(-2px);          
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.bouton:focus {
+  outline: none;                       
+  box-shadow: 0 0 10px rgba(255, 105, 180, 0.8); 
+}
+
+.bouton:active {
+  transform: scale(0.98);               
+}
+
+.affichefilm{
+  border: 2px solid #070000;
+}
+

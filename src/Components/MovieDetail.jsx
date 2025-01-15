@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams } from 'react-router';
 import axios from 'axios';
 import { WishlistContext } from '../Context/WishListContext';
 
 const MovieDetail = () => {
-  const { id } = useParams();
+  const {id} = useParams();
   const [movie, setMovie] = useState(null);
   const [cast, setCast] = useState([]);
   const [similarMovies, setSimilarMovies] = useState([]);
@@ -38,7 +38,8 @@ const MovieDetail = () => {
   return (
     <div>
       <h1>{movie.title}</h1>
-      <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
+      <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title}
+      style={{ width: '350px', height: 'auto'  }} />
       <p>{movie.overview}</p>
       <p>Release Date: {movie.release_date}</p>
       <p>Rating: {movie.vote_average}</p>
